@@ -1,11 +1,11 @@
-package com.example.excersises
+package exercises
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class ExcersisesApplication
+class ExercisesApplication
 
 fun main(args: Array<String>) {
-	runApplication<ExcersisesApplication>(*args)
+    runApplication<ExercisesApplication>(*args)
 }
