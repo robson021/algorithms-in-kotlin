@@ -1,7 +1,6 @@
 package exercises.extentions
 
-import org.junit.jupiter.api.Assertions.assertFalse
-import org.junit.jupiter.api.Assertions.assertTrue
+import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
 class StringExtensionsTest {
@@ -19,6 +18,16 @@ class StringExtensionsTest {
         assertFalse("abcd".isPermutationOfPalindrome())
         assertFalse("ab".isPermutationOfPalindrome())
         assertFalse("kajakk".isPermutationOfPalindrome())
+    }
+
+    @Test
+    fun `compress string`() {
+        assertEquals("a", "a".compress())
+        assertEquals("abc", "abc".compress())
+        assertEquals("abcdef", "abcdef".compress())
+        assertEquals("a4B2C2", "aaaaBBCC".compress())
+        assertEquals("a4b3c2d5e4", "aaaabbbccdddddeeee".compress())
+        assertEquals("a4b3c2d5e1", "aaaabbbccddddde".compress())
     }
 
 }
