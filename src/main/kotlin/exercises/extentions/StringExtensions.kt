@@ -1,5 +1,16 @@
 package exercises.extentions
 
+fun String.hasUniqueChars(): Boolean {
+    val setOfChars = HashSet<Char>(this.length)
+    for (c in this) {
+        val didNotContain = setOfChars.add(c)
+        if (!didNotContain) {
+            return false
+        }
+    }
+    return true
+}
+
 fun String.compress(): String {
     if (this.length < 2) {
         return this

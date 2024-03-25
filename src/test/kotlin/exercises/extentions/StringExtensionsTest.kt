@@ -30,4 +30,12 @@ class StringExtensionsTest {
         assertEquals("a4b3c2d5e1", "aaaabbbccddddde".compress())
     }
 
+    @Test
+    fun `check if the sting has unique characters`() {
+        assertTrue("".hasUniqueChars())
+        assertTrue("abcd 123".hasUniqueChars())
+        assertFalse("abc dd 123".hasUniqueChars())
+        assertFalse(" 1 ".hasUniqueChars())
+    }
+
 }
